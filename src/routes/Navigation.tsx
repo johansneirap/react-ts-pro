@@ -6,10 +6,7 @@ import {
     NavLink,
     Navigate
 } from "react-router-dom";
-import { LazyPage1 } from "../01-lazyload/pages/LazyPage1";
-import { LazyPage2 } from "../01-lazyload/pages/LazyPage2";
-import { LazyPage3 } from "../01-lazyload/pages/LazyPage3";
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 
 import { routes } from './routes';
 
@@ -44,6 +41,5 @@ export const Navigation = () => {
                 </div>
             </BrowserRouter>
         </Suspense>
-
     )
 }

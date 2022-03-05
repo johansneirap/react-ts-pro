@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import LazyPage1 from '../pages/LazyPage1';
 import LazyPage2 from '../pages/LazyPage2';
