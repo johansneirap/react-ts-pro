@@ -5,6 +5,8 @@ export interface ProductCardProps {
     className?: string;
     product: Product;
     style?: CSSProperties;
+    onChange?: ( args: onChangeArgs ) => void;
+    value?: number;
 };
 
 export interface Product {
@@ -18,3 +20,8 @@ export interface ProductContextProps {
     increaseBy: (value: number) => void;
     product: Product;
 };
+
+export interface onChangeArgs {
+    product: Product;
+    count: number;
+}
