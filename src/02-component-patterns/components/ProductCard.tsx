@@ -8,17 +8,30 @@ import { ProductContextProps, ProductCardProps } from '../interfaces/productInte
 export const productContext = createContext({} as ProductContextProps);
 const { Provider } = productContext;
 
-export const ProductCard = ({ children, product, className, style, onChange, value } :ProductCardProps) => {
+export const ProductCard = ({ children, product, className, style, onChange, value, initialValues } :ProductCardProps) => {
     
-    const { counter, increaseBy } = useProduct({ onChange, product, value });
+    const { counter, increaseBy, maxCount, isMaxCountReached, reset } = useProduct({ onChange, product, value, initialValues });
 
     return (
-        <Provider value={{ counter, increaseBy, product }}>
+        <Provider 
+            value={{ 
+                counter,
+                increaseBy, 
+                product, 
+                maxCount 
+            }}>
             <div 
                 className={`${ styles.productCard } ${ className }`}
                 style={ style }
             >
-                { children }
+                { children({
+                    count: counter,
+                    isMaxCountReached,
+                    maxCount: initialValues?.maxCount,
+                    product,
+                    increaseBy,
+                    reset
+                }) }
             </div>
         </Provider>
     )
