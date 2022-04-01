@@ -1,0 +1,64 @@
+[
+    {
+        "type": "text",
+        "name": "firstName",
+        "placeholder": "Johans",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "lastName",
+        "placeholder": "Neira",
+        "label": "Last Name",
+        "value": ""
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "JohnDoe@email.com",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "email"
+            }
+        ]
+    },
+    {
+        "type": "password",
+        "name": "password1",
+        "placeholder": "",
+        "label": "Password",
+        "value": ""
+    },
+    {
+        "type": "password",
+        "name": "password2",
+        "placeholder": "",
+        "label": "Repeat Password",
+        "value": ""
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "options": [
+            { "id":1, "label":"Destiny" },
+            { "id":2, "label":"Horizon"},
+            { "id":3, "label":"Pokemon"}
+        ]
+    }
+]
